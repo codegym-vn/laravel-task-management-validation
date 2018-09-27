@@ -13,7 +13,7 @@ composer install
 npm install
 
 #
-<h2>Cấu hình databse</h2>
+<h2>Cấu hình database</h2>
 Tạo file .env từ file .env mẫu
 
 cp .env.example .env
@@ -30,7 +30,7 @@ DB_PASSWORD= mật khẩu
 
 php artisan key:generate
 
-<h3>Chạy migration và seeding<h3>
+<h3>Chạy migration và seeding</h3>
 
 php artisan migrate --seed
 
