@@ -20,7 +20,7 @@ cp .env.example .env
 
 Cấu hình biến môi trường trong file .env
 
-DB_DATABASE= tên databse
+DB_DATABASE= tên database
 
 DB_USERNAME= tên đăng nhập
  
@@ -33,6 +33,7 @@ php artisan key:generate
 <h3>Chạy migration và seeding<h3>
 
 php artisan migrate --seed
+
 #
 Chạy project laravel trên địa chỉ http://localhost:8000 với câu lệnh
 
