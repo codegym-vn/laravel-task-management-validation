@@ -1,6 +1,9 @@
 Ứng dụng Task Management 
 #
-Luyện tập cấu hình database, sử dụng migration, seeding
+Luyện tập sử dụng Eloquent
+
+Thực hiện thao tác thêm sửa xóa dữ liệu
+
 #
 Mã nguồn được sử dụng để thực hành tại <a href="https://codegym.vn">CodeGym</a>
 #
