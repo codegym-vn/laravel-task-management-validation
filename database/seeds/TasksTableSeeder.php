@@ -35,5 +35,13 @@ class TasksTableSeeder extends Seeder
         $task->due_date         = "2018-09-17";
         $task->save();
 
+        $task = new Task();
+        $task->id               = 4;
+        $task->title            = "Công việc 4";
+        $task->content          = "Nội dung công việc 4";
+        $task->image            = "";
+        $task->due_date         = "2018-09-17";
+        $task->save();
+
     }
 }
