@@ -17,7 +17,6 @@ class TasksTableSeeder extends Seeder
         $task->content          = "Nội dung công việc 1";
         $task->image            = "";
         $task->due_date         = "2018-09-15";
-        $task->category_id      = 1;
         $task->save();
 
         $task = new Task();
@@ -26,7 +25,6 @@ class TasksTableSeeder extends Seeder
         $task->content          = "Nội dung công việc 2";
         $task->image            = "";
         $task->due_date         = "2018-09-16";
-        $task->category_id      = 1;
         $task->save();
 
         $task = new Task();
@@ -35,7 +33,6 @@ class TasksTableSeeder extends Seeder
         $task->content          = "Nội dung công việc 3";
         $task->image            = "";
         $task->due_date         = "2018-09-17";
-        $task->category_id      = 2;
         $task->save();
 
     }
