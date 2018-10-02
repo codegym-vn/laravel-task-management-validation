@@ -10,19 +10,19 @@
             <form method="post" action="{{ route('tasks.update', $task->id) }}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <label >Tên công việc</label>
+                    <label>Tên công việc</label>
                     <input type="text" class="form-control" name="title" value="{{ $task->title }}" required>
                 </div>
                 <div class="form-group">
-                    <label >Nội dung</label>
+                    <label>Nội dung</label>
                     <textarea class="form-control" rows="3" name="content"  required>{{ $task->content }}</textarea>
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlFile1">Ảnh</label>
+                    <label>Ảnh</label>
                     <input type="file" name="image" class="form-control-file" >
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlFile1">Ngày hết hạn</label>
+                    <label>Ngày hết hạn</label>
                     <input type="date" name="due_date" class="form-control"  value="{{ $task->due_date }}" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Chỉnh sửa</button>
