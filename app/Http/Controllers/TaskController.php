@@ -71,7 +71,8 @@ class TaskController extends Controller
      */
     public function edit($id)
     {
-
+        $task = Task::findOrFail($id);
+        return view('tasks.edit', compact('task'));
     }
 
     /**
@@ -82,7 +83,31 @@ class TaskController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $task = Task::findOrFail($id);
+        $task->title = $request->input('title');
+        $task->content = $request->input('content');
 
+        //cap nhat anh
+        if ($request->hasFile('image')) {
+
+            //xoa anh cu neu co
+            $currentImg = $task->image;
+            if ($currentImg) {
+                Storage::delete('/public/' . $currentImg);
+            }
+            // cap nhat anh moi
+            $image = $request->file('image');
+            $path = $image->store('images', 'public');
+            $task->image = $path;
+        }
+
+        $task->due_date = $request->input('due_date');
+        $task->save();
+
+        //dung session de dua ra thong bao
+        Session::flash('success', 'Cập nhật thành công');
+        //tao moi xong quay ve trang danh sach task
+        return redirect()->route('tasks.index');
     }
 
     /**

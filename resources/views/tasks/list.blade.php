@@ -24,6 +24,7 @@
                     <th scope="col">Ảnh</th>
                     <th scope="col">Ngày hết hạn</th>
                     <th></th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -40,6 +41,7 @@
                         @endif
                     </td>
                     <td>{{ $task->due_date }}</td>
+                    <td><a href="{{ route('tasks.edit', $task->id) }}">sửa</a></td>
                     <td><a href="{{ route('tasks.destroy', $task->id) }}" class="text-danger" onclick="return confirm('Bạn chắc chắn muốn xóa?')">xóa</a></td>
                 </tr>
                 @endforeach
