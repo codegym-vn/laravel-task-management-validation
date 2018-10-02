@@ -6,6 +6,14 @@
         <div class="col-md-12">
             <h2>Danh sách công viêc</h2>
         </div>
+        <div class="col-12">
+            @if (Session::has('success'))
+                <p class="text-success">
+                    <i class="fa fa-check" aria-hidden="true"></i>
+                    {{ Session::get('success') }}
+                </p>
+            @endif
+        </div>
         <div class="col-md-12">
             <table class="table table-striped">
                 <thead>
@@ -25,7 +33,7 @@
                     <td>{{ $task->content }}</td>
                     <td>
                         @if($task->image)
-                        <img src="image.png" alt="" style="width: 200px; height: 200px">
+                        <img src="{{ asset('storage/'.$task->image) }}" alt="" style="width: 200px; height: 200px">
                         @else
                             {{'Chưa có ảnh'}}
                         @endif
@@ -35,6 +43,7 @@
                 @endforeach
                 </tbody>
             </table>
+            <a href="{{ route('tasks.create') }}" class="btn btn-primary">Thêm mới</a>
         </div>
     </div>
 @endsection
