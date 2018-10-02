@@ -7,7 +7,7 @@
             <h2>Cập nhật công việc</h2>
         </div>
         <div class="col-md-12">
-            <form method="post" action="" enctype="multipart/form-data">
+            <form method="post" action="{{ route('tasks.update', $task->id) }}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label >Tên công việc</label>
