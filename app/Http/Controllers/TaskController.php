@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Task;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
 use http\Env\Response;
+use Illuminate\Support\Facades\Storage;
 
 
 class TaskController extends Controller
@@ -91,6 +93,19 @@ class TaskController extends Controller
      */
     public function destroy($id)
     {
+        $task = Task::findOrFail($id);
+        $image = $task->image;
 
+        //delete image
+        if ($image) {
+            Storage::delete('/public/' . $image);
+        }
+
+        $task->delete();
+
+        //dung session de dua ra thong bao
+        Session::flash('success', 'Xóa thành công');
+        //xoa xong quay ve trang danh sach khach hang
+        return redirect()->route('tasks.index');
     }
 }
