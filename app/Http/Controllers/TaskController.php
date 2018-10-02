@@ -59,7 +59,7 @@ class TaskController extends Controller
 
         //dung session de dua ra thong bao
         Session::flash('success', 'Tạo mới thành công');
-        //tao moi xong quay ve trang danh sach khach hang
+        //tao moi xong quay ve trang danh sach task
         return redirect()->route('tasks.index');
     }
 
@@ -105,7 +105,7 @@ class TaskController extends Controller
 
         //dung session de dua ra thong bao
         Session::flash('success', 'Xóa thành công');
-        //xoa xong quay ve trang danh sach khach hang
+        //xoa xong quay ve trang danh sach task
         return redirect()->route('tasks.index');
     }
 }
