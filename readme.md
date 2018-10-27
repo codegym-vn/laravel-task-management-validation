@@ -1,8 +1,7 @@
 Ứng dụng Task Management 
 #
-Luyện tập sử dụng Eloquent
+Luyện tập sử dụng Validation
 
-Thực hiện thao tác thêm sửa xóa dữ liệu
 
 #
 Mã nguồn được sử dụng để thực hành tại <a href="https://codegym.vn">CodeGym</a>
