@@ -37,7 +37,7 @@ class CreateTaskRequest extends FormRequest
             'title.required' => 'Tiêu đề là bắt buộc',
             'title.min' => 'Tiêu đề có ít nhất 3 ký tự',
             'content.required' => 'Nội dung là bắt buộc',
-            'content.min' => 'Tiêu đề có ít nhất 3 ký tự',
+            'content.min' => 'Nội dung có ít nhất 3 ký tự',
             'image.image' => 'Ảnh không đúng định dạng: jpeg,png,jpg',
             'due_date.required' => 'Ngày hết hạn là bắt buộc',
             'due_date.date'     => 'Sai định dạng ngày thàng'
